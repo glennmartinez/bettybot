@@ -18,7 +18,6 @@ gem "rerun"
 gem 'thin'
 gem 'bson_ext'
 
-gem 'pg'
 # Templating engine
 # gem 'haml'
 # gem 'erb'
