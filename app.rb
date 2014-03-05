@@ -50,8 +50,14 @@ get '/'	do
 
  "Testing Sinatra"
  @scores = Score.all 
- @score = Score.new
  erb :index
+
+end
+
+get '/new' do
+
+@score = Score.new
+erb :new
 
 end
 
