@@ -37,7 +37,7 @@ configure :development, :test do
 end
 
 configure :production do
-  $logger = Logger.new('log/qa-dashboard-production.log','weekly')
+  $logger = Logger.new('log/betty-log-production.log','weekly')
   $logger.level = Logger::WARN
 end
 

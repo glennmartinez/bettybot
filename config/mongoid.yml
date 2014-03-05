@@ -26,12 +26,14 @@ production:
       # A session can have any number of hosts. Usually 1 for a single
       # server setup, and at least 3 for a replica set. Hosts must be
       # an array of host:port pairs. This session is single server.
-      hosts:
-        - localhost:27017
-      # Define the default database name.
-      database: test
+      uri: <%= ENV['MONGOLAB_URI'] %>
+      # hosts:
+      #   - localhost:27017
+      # # Define the default database name.
+      # database: test
   options:
-    raise_not_found_error: false
+    skip_version_check: true
+    safe: true
 
 test:
   # This starts the session configuration settings. You may have as
