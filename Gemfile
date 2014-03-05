@@ -1,5 +1,6 @@
 source "http://rubygems.org"
 
+ruby "1.9.3"
 gem "i18n"
 # gem "rest-client", :git => "https://github.com/zyxit/rest-client.git"
 gem "rest-client"
