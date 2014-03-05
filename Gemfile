@@ -6,7 +6,7 @@ gem "rest-client"
 gem "json"
 
 # Persistence
-gem 'mongoid'
+gem 'mongoid', "~> 3.1.4"
 
 # Framework
 gem 'sinatra'
@@ -16,7 +16,9 @@ gem "rerun"
 
 # Application server
 gem 'thin'
+gem 'bson_ext'
 
+gem 'pg'
 # Templating engine
 # gem 'haml'
 # gem 'erb'
@@ -38,8 +40,9 @@ gem 'rack-cors'
 gem 'em-websocket'
 
 # For helpers goodness
-gem 'activesupport'
+gem 'activesupport' 
 gem 'actionpack', '~> 3.2.13'
+ # gem 'actionpack', '~> 3.2.13'
 
 
 # DB Drivers to access Greenzone
@@ -47,3 +50,4 @@ gem 'actionpack', '~> 3.2.13'
 
 # For recurring tasks
 gem 'rufus-scheduler'
+

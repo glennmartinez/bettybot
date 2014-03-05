@@ -10,8 +10,9 @@ include Mongoid::Document
   field :bugscore, type: Integer
   field :speedscore, type: Integer
   field :qascore, type: Integer
+  field :date, type: String
    
-  # index({ key: 1 }, { unique: true, name: "plankey_index" })  
+   index({ key: 1 }, { unique: true, name: "teamname_index" })  
 
 	
 

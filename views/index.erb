@@ -8,6 +8,17 @@
 
 <body>
 	
+	<ul>
+<% @scores.each do |score| %>
+  <li>
+    <h2><a href="/posts/<%= score.id %>"><%= score.teamname %></a>
+    <span><%= score.date %></span>
+    <span><%= score.qascore %></span>
+
+    </h2>
+  </li>
+<% end %>
+</ul> 
 
 </body>
 

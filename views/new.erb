@@ -1,0 +1,37 @@
+<html>
+
+<head>
+	
+<h1>Create Score</h1>
+</head>
+
+
+<body>
+	
+	
+	<form action="/scores" method="post">
+	  <label for="score_product">Product:</label><br />
+	  <input id="post_title" name="score[product]" type="text" value="<%= @score.product %>" />
+	  <br />
+	  <label for="score_teamname">Teamname:</label><br />
+	  <input id="post_title" name="score[teamname]" type="text" value="<%= @score.teamname %>" />
+	  <br />
+	   <label for="score_bugscore">Bugscore:</label><br />
+	  <input id="post_bugscore" name="score[bugscore]" type="text" value="<%= @score.bugscore %>" />
+	  <br />
+	   <label for="score_speedscore">Speedscore:</label><br />
+	  <input id="post_speedscore" name="score[speedscore]" type="text" value="<%= @score.speedscore %>" />
+	  <br />
+	   <label for="score_qascore">QA Score:</label><br />
+	  <input id="post_qascore" name="score[qascore]" type="text" value="<%= @score.qascore %>" />
+	  <br />
+	   <label for="score_date">Date:</label><br />
+	  <input id="post_date" name="score[date]" type="text" value="<%= @score.date %>" />
+	  <br />
+	  
+	 
+	  <input type="submit" value="Create Score" />
+	</form>   
+</body>
+
+</html>

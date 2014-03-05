@@ -12,7 +12,7 @@ development:
       hosts:
         - localhost:27017
       # Define the default database name.
-      database: bettybot
+      database: test
   options:    
     raise_not_found_error: false
 
@@ -29,7 +29,7 @@ production:
       hosts:
         - localhost:27017
       # Define the default database name.
-      database: bettybot
+      database: test
   options:
     raise_not_found_error: false
 
@@ -46,4 +46,4 @@ test:
       hosts:
         - localhost:27017
       # Define the default database name.
-      database: bettybot
+      database: test

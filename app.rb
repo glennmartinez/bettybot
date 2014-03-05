@@ -11,7 +11,7 @@ require "rest_client"
 require 'rufus/scheduler'
 
 
-Dir[File.expand_path("lib/*.rb", File.dirname(__FILE__))].map {|f| require f}
+# Dir[File.expand_path("lib/*.rb", File.dirname(__FILE__))].map {|f| require f}
 Dir[File.expand_path("models/*.rb", File.dirname(__FILE__))].map {|f| require f}
 
 
@@ -25,7 +25,7 @@ configure do
   set :public_folder, 'public'
   set :erb, {:format => :html5} # default Haml format is :xhtml
 
-  Initialise Mongoid
+  # Initialise Mongoid
   Mongoid.load!("config/mongoid.yml")
 end
 
@@ -42,11 +42,24 @@ configure :production do
 end
 
 
+# helpers ActionView::Helpers::DateHelper
+# helpers Helpers
+
 
 get '/'	do
 
  "Testing Sinatra"
-
+ @scores = Score.all 
+ @score = Score.new
  erb :index
 
+end
+
+post "/scores" do
+  @score = Score.new(params[:score])
+  if @score.save
+    redirect "posts/#{@score.id}"
+  else
+    erb :"scores/new"
+  end
 end
