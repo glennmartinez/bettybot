@@ -37,8 +37,8 @@ configure :development, :test do
 end
 
 configure :production do
-  $logger = Logger.new('log/betty-log-production.log','weekly')
-  $logger.level = Logger::WARN
+  # $logger = Logger.new('log/betty-log-production.log','weekly')
+  # $logger.level = Logger::WARN
 end
 
 
@@ -50,8 +50,14 @@ get '/'	do
 
  "Testing Sinatra"
  @scores = Score.all 
- @score = Score.new
  erb :index
+
+end
+
+get '/new' do
+
+@score = Score.new
+erb :new
 
 end
 
