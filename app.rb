@@ -85,8 +85,8 @@ post "/hipchat" do
    "message" => "hello hello"
 
   }.to_json,
-  :content-type => :json, :accept => :json
-  
+  :content_type => :json, :accept => :json
+
 
   ) 
 
