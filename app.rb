@@ -77,7 +77,16 @@ get "/hipchat" do
 
  uri = "https://api.hipchat.com/v2/room/qa-bot/notification?auth_token=S8lyaBBoshJQupJUocIYOzK2LFeCRrj347cwXnfl"
 
- RestClient.post uri, { 'message' => @score, 'color' => 'gray' }, :content_type => :json, :accept => :json
+ RestClient.post(uri,
+
+  {
+   "content-type": "application/json",
+   "color":  "red",
+   "message": "hello hello"
+
+  }
+
+  ) 
 
 
 end 
