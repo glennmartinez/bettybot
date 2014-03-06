@@ -71,7 +71,7 @@ post "/scores" do
 end
 
 
-get "/hipchat" do 
+post "/hipchat" do 
 
  @score = Score.all.to_json
 
@@ -80,9 +80,9 @@ get "/hipchat" do
  RestClient.post(uri,
 
   {
-   "content-type": "application/json",
-   "color":  "red",
-   "message": "hello hello"
+   "content-type" => "application/json",
+   "color" => "red",
+   "message" => "hello hello"
 
   }
 
