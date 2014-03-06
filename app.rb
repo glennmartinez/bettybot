@@ -84,7 +84,9 @@ post "/hipchat" do
    "color" => "red",
    "message" => "hello hello"
 
-  }
+  }.to_json,
+  :content-type => :json, :accept => :json
+  
 
   ) 
 
