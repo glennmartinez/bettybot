@@ -94,6 +94,7 @@ post "/hipchat" do
 end 
 
 
+
 post "/savescores" do
 
  # puts requestBody = request.body.to_json
@@ -107,8 +108,7 @@ post "/savescores" do
     {
     teamname: params["teamname"],
     bugscore: params["bugscore"],
-    date: Date.parse(Time.now.to_s)
-
+    date: Date.parse(params["date"].to_s)
     }
 
   Score.create score 
