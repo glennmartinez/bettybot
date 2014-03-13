@@ -20,7 +20,6 @@ configure do
   set :sessions, true
   set :bind, '0.0.0.0'
 
-  set :views, "#{File.dirname(__FILE__)}/views"
 
   set :public_folder, 'public'
   set :erb, {:format => :html5} # default Haml format is :xhtml
@@ -31,6 +30,7 @@ end
 
 configure :development, :test do
   set :protection, :except => :frame_options  
+  set :port, 9494
 
   $logger = Logger.new(STDOUT)
   $logger.level = Logger::INFO
@@ -92,3 +92,28 @@ post "/hipchat" do
 
 
 end 
+
+
+post "/savescores" do
+
+ # puts requestBody = request.body.to_json
+ # puts requestBody["teamname"]
+
+  puts params = JSON.parse(request.env["rack.input"].read)
+  puts params["teamname"]
+  puts params["bugscore"]
+
+  score = 
+    {
+    teamname: params["teamname"],
+    bugscore: params["bugscore"],
+    date: Date.parse(Time.now.to_s)
+
+    }
+
+  Score.create score 
+
+
+
+end 
+
