@@ -76,7 +76,7 @@ post "/hipchat" do
  @score = Score.all.to_json
 
    params = JSON.parse(request.env["rack.input"].read)
-   message = params["message"]
+   message = params["item"]["message"]["message"]
 
 
  uri = "https://api.hipchat.com/v2/room/qa-bot/notification?auth_token=S8lyaBBoshJQupJUocIYOzK2LFeCRrj347cwXnfl"
