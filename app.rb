@@ -75,6 +75,9 @@ post "/hipchat" do
 
  @score = Score.all.to_json
 
+   params = JSON.parse(request.env["rack.input"].read)
+
+
  uri = "https://api.hipchat.com/v2/room/qa-bot/notification?auth_token=S8lyaBBoshJQupJUocIYOzK2LFeCRrj347cwXnfl"
 
  RestClient.post(uri,
@@ -82,7 +85,7 @@ post "/hipchat" do
   {
    "content-type" => "application/json",
    "color" => "red",
-   "message" => "I love @jonas and @fabs"
+   "message" => "#{params}"
 
   }.to_json,
   :content_type => :json, :accept => :json
