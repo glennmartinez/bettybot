@@ -11,7 +11,7 @@ module Helpers
         $logger.debug "command name #{command}"        
   
 
-  		response = Scoresbot.getScores(messageArray)
+  		Scoresbot.getScores(messageArray)
 
 		# if command == "scores"
 
