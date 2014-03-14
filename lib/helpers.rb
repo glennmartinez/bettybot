@@ -16,7 +16,7 @@ module Helpers
 
 		elsif command == "qanotes"
 
-
+			response "you hit the qanotes"
 
 		else command == "help"
 
