@@ -65,9 +65,23 @@ module Scoresbot
 
 	def self.supertest
 
+			scorelist = Score.where(:teamname => teamname, :date.lte => (Time.now), :date.gte => (Time.now - 1.weeks)).order_by(:date.asc)
+ 
+			scorelist.each do |score|
+
+				 bugScore +=	score.bugscore.to_i
+
+			end
+ 
+
+
+
+			bugScore
+
+
 		test = "super return"
 
-		return test
+		return bugScore
 		
 	end
 
