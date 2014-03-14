@@ -89,7 +89,7 @@ post "/hipchat" do
   {
    "content-type" => "application/json",
    "color" => "red",
-   "message" => "testing some stuff"
+   "message" => "superresponse"
 
   }.to_json,
   :content_type => :json, :accept => :json
@@ -128,7 +128,7 @@ end
 get "/testscores" do
   
   Scoresbot.getTeamScore("hedgehogs", 4)
-  Scoresbot.getTeamScore("muppets", 4)
+  # Scoresbot.getTeamScore("muppets", 4)
 
 end
 
