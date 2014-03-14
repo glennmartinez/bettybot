@@ -89,7 +89,7 @@ post "/hipchat" do
   {
    "content-type" => "application/json",
    "color" => "red",
-   "message" => superresponse
+   "message" => "testing some stuff"
 
   }.to_json,
   :content_type => :json, :accept => :json
