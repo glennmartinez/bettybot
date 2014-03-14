@@ -78,7 +78,7 @@ post "/hipchat" do
 
    params = JSON.parse(request.env["rack.input"].read)
 
-   scoresresponse = Interceptor.main(params) 
+   # scoresresponse = Interceptor.main(params) 
 
    superresponse =  Scoresbot.getTeamScore("hedgehogs", 4)
 
