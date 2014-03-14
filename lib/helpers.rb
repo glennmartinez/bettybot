@@ -13,7 +13,6 @@ module Helpers
 		if command == "scores"
 
 			response = Scoresbot.getScores(messageArray)
-			puts "hello"
 
 		elsif command == "qanotes"
 
@@ -21,7 +20,7 @@ module Helpers
 
 		else command == "help"
 
-
+			response = "Sorry Betty Don't play that!"
 		end
 
 
