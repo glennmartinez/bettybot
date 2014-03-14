@@ -21,7 +21,9 @@ module Helpers
 
 		else command == "help"
 
-			response =  "not found"
+			# response =  "not found"
+			response = Scoresbot.getScores(messageArray)
+
 		end
 
 
