@@ -12,7 +12,9 @@ module Scoresbot
 		teamname = messageArrau[2] #gets first parameter such as 'teamname'
 		weeks = messageArray[3] #gets second parameter such as number of weeks
 
-		self.getTeamScore(teamname, weeks.to_i)
+
+
+		self.getTeamScore(teamname, 5)
 
 
 	end
