@@ -39,8 +39,8 @@ configure :development, :test do
 end
 
 configure :production do
-  # $logger = Logger.new('log/betty-log-production.log','weekly')
-  # $logger.level = Logger::WARN
+  $logger = Logger.new('STDOUT')
+  $logger.level = Logger::DEBUG
 end
 
 

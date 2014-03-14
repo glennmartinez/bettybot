@@ -8,7 +8,7 @@ module Helpers
 
 		messageArray = message.split
 		command = messageArray[1]  #checks the command ie: scores, qanotes, help
-        $logger.error "command name #{command}"        
+        $logger.debug "command name #{command}"        
   
 
 		if command == "scores"
@@ -19,7 +19,7 @@ module Helpers
 
 			response "you hit the qanotes"
 
-		else 
+		else command == "help"
 
 			response =  "not found"
 		end
