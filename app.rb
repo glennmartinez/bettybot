@@ -39,7 +39,7 @@ configure :development, :test do
 end
 
 configure :production do
-  $logger = Logger.new('STDOUT')
+  $logger = Logger.new(STDOUT)
   $logger.level = Logger::DEBUG
 end
 
@@ -71,6 +71,7 @@ post "/scores" do
     erb :"scores/new"
   end
 end
+
 
 post "/hipchat" do 
 
