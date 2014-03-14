@@ -56,11 +56,19 @@ module Scoresbot
 			# listArray << "'Weekly Standard Div:' + " "   + '#{standardDev}'"
 
 			# listArray = "hello"
-				testmachine = "testing testing 1 2 3"
+				testmachine = "testing testing"
 
 			return testmachine
 
 
+	end
+
+	def self.supertest
+
+		test = "super return"
+
+		return test
+		
 	end
 
 
