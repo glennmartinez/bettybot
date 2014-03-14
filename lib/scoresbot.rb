@@ -14,7 +14,7 @@ module Scoresbot
 
 
 
-		self.getTeamScore(teamname, weeks)
+		self.getTeamScore("muppets", weeks)
 
 
 	end
@@ -55,7 +55,7 @@ module Scoresbot
 			# listArray << "'Weekly average:' + ' '    + '#{average}' + ' ' " 
 			# listArray << "'Weekly Standard Div:' + " "   + '#{standardDev}'"
 
-			listArray = "#{teamname}" +" " + "#{bugScore}" + " " + 'Weekly Average' + "#{average}"
+			listArray = "#{teamname}" +" " + "#{bugScore}" + " " + 'Weekly Average' + "#{average}" + "#{teamweeks}"
 
 			return listArray
 
