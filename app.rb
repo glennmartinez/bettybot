@@ -74,11 +74,11 @@ end
 
 post "/hipchat" do 
 
- @score = Score.all.to_json
+   @score = Score.all.to_json
 
    params = JSON.parse(request.env["rack.input"].read)
 
-   response = Interceptor.main(params) 
+   scoresresponse = Interceptor.main(params) 
 
    uri = "https://api.hipchat.com/v2/room/qa-bot/notification?auth_token=S8lyaBBoshJQupJUocIYOzK2LFeCRrj347cwXnfl"
 
@@ -87,7 +87,7 @@ post "/hipchat" do
   {
    "content-type" => "application/json",
    "color" => "red",
-   "message" => "#{response}"
+   "message" => "#{scoresresponse}"
 
   }.to_json,
   :content_type => :json, :accept => :json
