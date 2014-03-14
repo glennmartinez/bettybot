@@ -13,6 +13,8 @@ require 'rufus/scheduler'
 
 # Dir[File.expand_path("lib/*.rb", File.dirname(__FILE__))].map {|f| require f}
 Dir[File.expand_path("models/*.rb", File.dirname(__FILE__))].map {|f| require f}
+Dir[File.expand_path("lib/*.rb", File.dirname(__FILE__))].map {|f| require f}
+
 
 
 configure do
@@ -75,22 +77,17 @@ post "/hipchat" do
  @score = Score.all.to_json
 
    params = JSON.parse(request.env["rack.input"].read)
-   message = params["item"]["message"]["message"]
-   messageArray = message.split
 
-   command = messageArray[1]
-   firstParameter = messageArrau[2]
-   secondParameter = messageArray[3]
+   response = Interceptor.main(params) 
 
-
- uri = "https://api.hipchat.com/v2/room/qa-bot/notification?auth_token=S8lyaBBoshJQupJUocIYOzK2LFeCRrj347cwXnfl"
+   uri = "https://api.hipchat.com/v2/room/qa-bot/notification?auth_token=S8lyaBBoshJQupJUocIYOzK2LFeCRrj347cwXnfl"
 
  RestClient.post(uri,
 
   {
    "content-type" => "application/json",
    "color" => "red",
-   "message" => "#{message}"
+   "message" => "#{response}"
 
   }.to_json,
   :content_type => :json, :accept => :json
@@ -124,4 +121,12 @@ post "/savescores" do
 
 
 end 
+
+
+get "/testscores" do
+  
+  Scoresbot.getTeamScore("hedgehogs", 4)
+  Scoresbot.getTeamScore("muppets", 4)
+
+end
 

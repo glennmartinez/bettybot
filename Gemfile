@@ -1,6 +1,6 @@
 source "http://rubygems.org"
 
-ruby "1.9.3"
+# ruby "1.9.3"
 gem "i18n"
 # gem "rest-client", :git => "https://github.com/zyxit/rest-client.git"
 gem "rest-client"
@@ -51,3 +51,4 @@ gem 'actionpack', '~> 3.2.13'
 # For recurring tasks
 gem 'rufus-scheduler'
 
+gem "ruby-standard-deviation", "~> 2.0.0"
