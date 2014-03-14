@@ -21,7 +21,7 @@ module Helpers
 
 		else command == "help"
 
-			response = "Sorry Betty Don't play that!"
+			response = "Sorry Betty Don't play that! " + "#{command}"
 		end
 
 
