@@ -19,9 +19,9 @@ module Helpers
 
 			response "you hit the qanotes"
 
-		else command == "help"
+		else 
 
-			response = "Sorry Betty Don't play that! " + "#{command}"
+			response =  command
 		end
 
 
