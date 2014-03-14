@@ -10,9 +10,9 @@ module Scoresbot
 		
 		command = messageArray[1]  #checks the command ie: scores, qanotes, help
 		teamname = messageArrau[2] #gets first parameter such as 'teamname'
-		weeks = messageArray[3] #gets second parameter such as 
+		weeks = messageArray[3] #gets second parameter such as number of weeks
 
-		self.getTeamScore(teamname, weeks)
+		self.getTeamScore(teamname, weeks.to_i)
 
 
 	end
