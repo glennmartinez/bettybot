@@ -14,7 +14,7 @@ module Scoresbot
 
 
 
-		self.getTeamScore(teamname, weeks)
+		self.getTeamScore(teamname, weeks.to_i)
 
 
 	end
