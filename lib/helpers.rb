@@ -11,21 +11,23 @@ module Helpers
         $logger.debug "command name #{command}"        
   
 
-		if command == "scores"
+  		response = Scoresbot.getScores(messageArray)
 
-			response = Scoresbot.getScores(messageArray)
+		# if command == "scores"
 
-		elsif command == "qanotes"
+		# 	response = Scoresbot.getScores(messageArray)
 
-			response "you hit the qanotes"
+		# elsif command == "qanotes"
 
-		else command == "help"
+		# 	response "you hit the qanotes"
 
-			 response =  "not found"
+		# else command == "help"
+
+		# 	 response =  "not found"
 
 
 
-		end
+		# end
 
 
 		
