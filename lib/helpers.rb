@@ -21,7 +21,7 @@ module Helpers
 
 		else 
 
-			response =  command
+			response =  "not found"
 		end
 
 
