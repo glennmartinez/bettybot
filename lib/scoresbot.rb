@@ -81,7 +81,7 @@ module Scoresbot
 
 		test = "super return"
 
-		return "#{bugScore}"
+		return test
 		
 	end
 
