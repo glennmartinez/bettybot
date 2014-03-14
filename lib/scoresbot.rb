@@ -76,7 +76,7 @@ module Scoresbot
 
 
 
-			bugScore
+		bugScore
 
 
 		test = "super return"

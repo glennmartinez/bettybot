@@ -10,7 +10,7 @@ module Interceptor
 
 		 response = Helpers.botrouter(message)
 
-		 return response			
+		 return message			
 
 
 		
