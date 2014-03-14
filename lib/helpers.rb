@@ -10,7 +10,7 @@ module Helpers
 		command = messageArray[1]  #checks the command ie: scores, qanotes, help
         $logger.debug "command name #{command}"        
   
-        Scoresbot.supertest()
+        response = Scoresbot.supertest()
   		# Scoresbot.getScores(messageArray)
 
 		# if command == "scores"
