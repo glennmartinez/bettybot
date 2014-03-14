@@ -78,24 +78,22 @@ post "/hipchat" do
 
    params = JSON.parse(request.env["rack.input"].read)
 
-   # scoresresponse = Interceptor.main(params) 
-
-   superresponse =  Scoresbot.getTeamScore("hedgehogs", 4)
+   scoresresponse = Interceptor.main(params) 
 
    uri = "https://api.hipchat.com/v2/room/qa-bot/notification?auth_token=S8lyaBBoshJQupJUocIYOzK2LFeCRrj347cwXnfl"
 
- RestClient.post(uri,
+   RestClient.post(uri,
 
-  {
-   "content-type" => "application/json",
-   "color" => "red",
-   "message" => "#{superresponse}"
+    {
+     "content-type" => "application/json",
+     "color" => "red",
+     "message" => "#{superresponse}"
 
-  }.to_json,
-  :content_type => :json, :accept => :json
+    }.to_json,
+    :content_type => :json, :accept => :json
 
 
-  ) 
+    ) 
 
 
 end 
