@@ -65,7 +65,7 @@ module Scoresbot
 
 	def self.supertest
 
-			scorelist = Score.where(:teamname => teamname, :date.lte => (Time.now), :date.gte => (Time.now - 1.weeks)).order_by(:date.asc)
+			scorelist = Score.where(:teamname => teamname, :date.lte => (Time.now), :date.gte => (Time.now - 10.weeks)).order_by(:date.asc)
  
 			scorelist.each do |score|
 
