@@ -80,6 +80,8 @@ post "/hipchat" do
 
    scoresresponse = Interceptor.main(params) 
 
+   superresponse =  Scoresbot.getTeamScore("hedgehogs", 4)
+
    uri = "https://api.hipchat.com/v2/room/qa-bot/notification?auth_token=S8lyaBBoshJQupJUocIYOzK2LFeCRrj347cwXnfl"
 
  RestClient.post(uri,
@@ -87,7 +89,7 @@ post "/hipchat" do
   {
    "content-type" => "application/json",
    "color" => "red",
-   "message" => scoresresponse.to_s
+   "message" => superresponse
 
   }.to_json,
   :content_type => :json, :accept => :json
