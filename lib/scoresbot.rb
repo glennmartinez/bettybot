@@ -14,18 +14,18 @@ module Scoresbot
 
 
 
-		self.getTeamScore(teamname, 5)
+		self.getTeamScore("muppets", 5)
 
 
 	end
 
 
-	def self.getTeamScore(teamname, weeks)
+	def self.getTeamScore(teamname, teamweeks)
 			bugScore = 0
 			scoreArray = Array.new
 			listArray = Array.new
 
-			scorelist = Score.where(:teamname => teamname, :date.lte => (Time.now), :date.gte => (Time.now - weeks.weeks)).order_by(:date.asc)
+			scorelist = Score.where(:teamname => teamname, :date.lte => (Time.now), :date.gte => (Time.now - teamweeks.weeks)).order_by(:date.asc)
 			yearlylist = Score.where(:teamname => teamname, :date.lte => (Time.now), :date.gte => (Time.now - 52.weeks)).order_by(:date.asc)
 
 			scorelist.each do |score|
