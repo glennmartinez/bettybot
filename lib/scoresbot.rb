@@ -55,7 +55,7 @@ module Scoresbot
 			# listArray << "'Weekly average:' + ' '    + '#{average}' + ' ' " 
 			# listArray << "'Weekly Standard Div:' + " "   + '#{standardDev}'"
 
-			listArray = "#{teamname}" + "#{bugScore}" 
+			listArray = "hello"
 
 			return listArray
 
