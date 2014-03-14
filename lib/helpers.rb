@@ -7,8 +7,9 @@ module Helpers
 	def self.botrouter(message)
 
 		messageArray = message.split
-		puts command = messageArray[1]  #checks the command ie: scores, qanotes, help
-		  
+		command = messageArray[1]  #checks the command ie: scores, qanotes, help
+        $logger.debug "command name #{command}"        
+  
 
 		if command == "scores"
 
