@@ -58,7 +58,7 @@ module Scoresbot
 			# listArray = "hello"
 				# testmachine = "testing testing"
 
-			return bugScore
+			return "this is the bugscore:" + "#{bugScore}"
 
 
 	end
