@@ -8,9 +8,10 @@ module Interceptor
 
 		 message = request["item"]["message"]["message"]
 
-		 response = Helpers.botrouter(message)
+		 # response = Helpers.botrouter(message)
+		 getscores = Scoresbot.getTeamScore("muppets", 2)
 
-		 return response			
+		 return getscores			
 
 
 		
