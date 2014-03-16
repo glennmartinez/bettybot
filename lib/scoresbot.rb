@@ -80,7 +80,7 @@ module Scoresbot
 		 bugScore
 
 
-		test = "super return" + "#{bugScore}"
+		test = "super return"
 
 		return test
 		
