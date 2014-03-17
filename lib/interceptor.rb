@@ -11,7 +11,7 @@ module Interceptor
 		 teamname = messageArray[2].to_s #gets first parameter such as 'teamname'
 		 weeks = messageArray[3] #gets second parameter such as number of weeks
 		 # response = Helpers.botrouter(message)
-		 getscores = Scoresbot.getTeamScore(teamname, 10)
+		 getscores = Scoresbot.getTeamScore(teamname, weeks)
 
 		 return getscores			
 
