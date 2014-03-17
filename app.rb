@@ -79,7 +79,7 @@ post "/hipchat" do
    params = JSON.parse(request.env["rack.input"].read)
    response = Interceptor.main(params)
    responseColour = response[0]
-   scoresresponse = response[1]
+   scoresresponse = response[1] + "<br> <img src='http://upload.wikimedia.org/wikipedia/en/5/5e/Betty_Rubble.png' width='62' height='120'/>"
 
 
    RestClient.post(uri,
