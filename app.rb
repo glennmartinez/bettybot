@@ -87,7 +87,7 @@ post "/hipchat" do
 
     {
      "content-type" => "application/json",
-     "color" => "#{responseColour}",
+     "color" => "green",
      "message" => "#{scoresresponse}"
 
     }.to_json,
