@@ -80,7 +80,7 @@ post "/hipchat" do
    response = Interceptor.main(params)
    splitResponseArray = response.split 
    responseColour = splitResponseArray[0].to_s
-   scoresresponse = splitResponseArray[1].to_s
+   scoresresponse = splitResponseArray[1]
 
 
    RestClient.post(uri,
