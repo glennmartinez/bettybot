@@ -37,7 +37,7 @@ module Scoresbot
 
 			yearlylist.each do |yearly|
 
-					 yearlyBugScore += score.bugscore.to_i
+					 yearlyBugScore += yearly.bugscore.to_i
 					 scoreArray << yearly.bugscore.to_i
 
 			end
@@ -48,8 +48,9 @@ module Scoresbot
 			scoreArray.count 
 			averageScore = yearlyBugScore / scoreArray.count
 			standardDev =  scoreArray.stdev.round(2)
+		  
 		   "this is the BugScore" + " "   + "#{bugScore}" + " "
-			 "this is the weekly average" + " "   + "#{average}" + " "
+			 "this is the weekly average" + " "   + "#{averageScore}" + " "
 			 "this is the standar div" + " "   + "#{standardDev}"
 
 			# listArray << "'Team:' + ' '  + '#{teamname}' + ' '"

@@ -123,10 +123,8 @@ end
 
 get "/testscores" do
   
-  Scoresbot.getTeamScore("hedgehogs", 4)
-  # Scoresbot.getTeamScore("muppets", 4)
+    response = Scoresbot.getTeamScore("hedgehogs", 10)
 
-  Scoresbot.supertest
 
 end
 

@@ -10,7 +10,7 @@ module Helpers
 		command = messageArray[1]  #checks the command ie: scores, qanotes, help
         $logger.debug "command name #{command}"        
   
-		response  Scoresbot.getTeamScore("hedgehogs", 4)
+		response = Scoresbot.getTeamScore("hedgehogs", 4)
   		# Scoresbot.getScores(messageArray)
 
 		# if command == "scores"
@@ -29,7 +29,7 @@ module Helpers
 
 		# end
 
-
+		return response
 		
 	end
 
