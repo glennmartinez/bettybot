@@ -62,7 +62,7 @@ module Scoresbot
 
 
 
-	def seld.getResponseColour(teamScore, standardDev)
+	def self.getResponseColour(teamScore, standardDev)
 
 		if teamScore <= standardDev
 
@@ -70,6 +70,7 @@ module Scoresbot
 		else
 			colour = 'red'
 		
+	  end
 	end
 
 
