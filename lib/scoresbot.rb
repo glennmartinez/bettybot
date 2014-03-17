@@ -25,7 +25,7 @@ module Scoresbot
 			scoreArray = Array.new
 			listArray = Array.new
 
-			scorelist = Score.where(:teamname => teamname, :date.lte => (Time.now), :date.gte => (Time.now - 1.weeks)).order_by(:date.asc)
+			scorelist = Score.where(:teamname => teamname, :date.lte => (Time.now), :date.gte => (Time.now - teamweeks.weeks)).order_by(:date.asc)
 			yearlylist = Score.where(:teamname => teamname, :date.lte => (Time.now), :date.gte => (Time.now - 52.weeks)).order_by(:date.asc)
 
 			scorelist.each do |score|
@@ -56,7 +56,7 @@ module Scoresbot
 			# listArray << "'Weekly Standard Div:' + " "   + '#{standardDev}'"
 
 			# listArray = "hello"
-				testmachine = "testing testing"
+				testmachine = "this is the score" + "#{bugScore}"
 
 			return testmachine
 
