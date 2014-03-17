@@ -25,6 +25,7 @@ module Scoresbot
 			yearlyBugScore = 0
 			scoreArray = Array.new
 			listArray = Array.new
+			responseArray = Array.new
 
 			scorelist = Score.where(:teamname => teamname, :date.lte => (Time.now), :date.gte => (Time.now - teamweeks.weeks)).order_by(:date.asc)
 			yearlylist = Score.where(:teamname => teamname, :date.lte => (Time.now), :date.gte => (Time.now - 52.weeks)).order_by(:date.asc)

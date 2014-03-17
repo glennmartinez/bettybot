@@ -21,11 +21,11 @@ module Interceptor
 
 			getscores = Scoresbot.getTeamScore(teamname, weeks.to_i)
 
-			 		 	return getscores			
+			return getscores			
 
 		 else 
 
-		 	
+
 		 	getscores = "Unknown command, please type: 'betty scores teamname weeks"
 
 		 	return getscores			
