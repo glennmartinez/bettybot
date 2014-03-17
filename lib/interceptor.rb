@@ -25,6 +25,7 @@ module Interceptor
 
 		 else 
 
+		 	
 		 	getscores = "Unknown command, please type: 'betty scores teamname weeks"
 
 		 	return getscores			
