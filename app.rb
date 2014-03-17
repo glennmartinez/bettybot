@@ -74,17 +74,19 @@ end
 
 
 post "/hipchat" do 
+   uri = "https://api.hipchat.com/v2/room/qa-bot/notification?auth_token=S8lyaBBoshJQupJUocIYOzK2LFeCRrj347cwXnfl"
 
    params = JSON.parse(request.env["rack.input"].read)
-   scoresresponse = Interceptor.main(params) 
+   response = Interceptor.main(params)
+   responseColour = response[0] 
+   scoresresponse = response[1]
 
-   uri = "https://api.hipchat.com/v2/room/qa-bot/notification?auth_token=S8lyaBBoshJQupJUocIYOzK2LFeCRrj347cwXnfl"
 
    RestClient.post(uri,
 
     {
      "content-type" => "application/json",
-     "color" => "red",
+     "color" => "#{responseColour}",
      "message" => "#{scoresresponse}"
 
     }.to_json,

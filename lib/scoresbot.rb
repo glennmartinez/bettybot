@@ -42,19 +42,35 @@ module Scoresbot
 
 			end
 
-
 			bugScoreAverage = bugScore / teamweeks
 			scoreArray.count 
 			averageScore = yearlyBugScore / scoreArray.count
 			standardDev =  scoreArray.stdev.round(2)
 
+			responseColour = self.getResponseColour(bugScoreAverage, standardDev)
 
-				testmachine = "Weekly Average:" + "#{bugScoreAverage}" + ",  52 Weekly Avg:" + "#{averageScore}" + ", Weekly Std Deviation:" + "#{standardDev}"
+			testmachine = "Weekly Average:" + "#{bugScoreAverage}" + ",  52 Weekly Avg:" + "#{averageScore}" + ", Weekly Std Deviation:" + "#{standardDev}"
 
-			return testmachine
+			responseArray << responseColour
+			responseArray << testmachine
+
+			return responseArray
 
 
 	end
+
+
+
+	def seld.getResponseColour(teamScore, standardDev)
+
+		if teamScore <= standardDev
+
+			colour = 'green'
+		else
+			colour = 'red'
+		
+	end
+
 
 	def self.supertest
 
