@@ -25,10 +25,13 @@ module Interceptor
 
 		 else 
 
+		 	response = Array.new
+		 	errorCommand = "Unknown command, please type: 'betty scores teamname weeks"
+		 	response << "red"
+		 	response << errorCommand
 
-		 	getscores = "Unknown command, please type: 'betty scores teamname weeks"
-
-		 	return getscores			
+		 	return response			
+		 
 		 end
 
 		
