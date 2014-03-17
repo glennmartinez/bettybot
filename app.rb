@@ -126,5 +126,7 @@ get "/testscores" do
   Scoresbot.getTeamScore("hedgehogs", 4)
   # Scoresbot.getTeamScore("muppets", 4)
 
+  Scoresbot.supertest
+
 end
 
