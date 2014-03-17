@@ -22,6 +22,7 @@ module Scoresbot
 
 	def self.getTeamScore(teamname, teamweeks)
 			bugScore = 0
+			yearlyBugScore = 0
 			scoreArray = Array.new
 			listArray = Array.new
 
