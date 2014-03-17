@@ -78,7 +78,6 @@ post "/hipchat" do
 
    params = JSON.parse(request.env["rack.input"].read)
    response = Interceptor.main(params)
-   # splitResponseArray = response.split 
    responseColour = response[0]
    scoresresponse = response[1]
 

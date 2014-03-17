@@ -50,7 +50,7 @@ module Scoresbot
 
 			responseColour = self.getResponseColour(bugScoreAverage, standardDev)
 
-			testmachine = "Weekly Average:" + "#{bugScoreAverage}" + ",  52 Weekly Avg:" + "#{averageScore}" + ", Weekly Std Deviation:" + "#{standardDev}"
+			testmachine = "Weekly Average:" + "<b>#{bugScoreAverage} </b>" + ",  52 Weekly Avg:" + "#{averageScore}" + ", Weekly Std Deviation:" + "#{standardDev}"
 
 			responseArray << responseColour
 			responseArray << testmachine
