@@ -43,23 +43,13 @@ module Scoresbot
 			end
 
 
-
-			bugScore
+			bugScoreAverage = bugScore / teamweeks
 			scoreArray.count 
 			averageScore = yearlyBugScore / scoreArray.count
 			standardDev =  scoreArray.stdev.round(2)
-		  
-		   "this is the BugScore" + " "   + "#{bugScore}" + " "
-			 "this is the weekly average" + " "   + "#{averageScore}" + " "
-			 "this is the standar div" + " "   + "#{standardDev}"
 
-			# listArray << "'Team:' + ' '  + '#{teamname}' + ' '"
-			# listArray << "Total Bugscore:' + ' '   + '#{bugScore}' + ' '"
-			# listArray << "'Weekly average:' + ' '    + '#{average}' + ' ' " 
-			# listArray << "'Weekly Standard Div:' + " "   + '#{standardDev}'"
 
-			# listArray = "hello"
-				testmachine = "Bugscore:" + "#{bugScore}" + ", Weekly Avg:" + "#{averageScore}" + ", Weekly Std Deviation:" + "#{standardDev}"
+				testmachine = "Weekly Average:" + "#{bugScoreAverage}" + ",  52 Weekly Avg:" + "#{averageScore}" + ", Weekly Std Deviation:" + "#{standardDev}"
 
 			return testmachine
 
