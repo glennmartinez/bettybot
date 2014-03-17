@@ -21,7 +21,8 @@ module Interceptor
 
 			getscores = Scoresbot.getTeamScore(teamname, weeks.to_i)
 
-			return getscores			
+			return getscores +  "<br> <img src='http://upload.wikimedia.org/wikipedia/en/5/5e/Betty_Rubble.png' width='62' height='120'/>"
+			
 
 		 else 
 
