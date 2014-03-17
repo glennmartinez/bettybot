@@ -78,17 +78,17 @@ post "/hipchat" do
 
    params = JSON.parse(request.env["rack.input"].read)
    response = Interceptor.main(params)
-   splitResponseArray = response.split 
-   responseColour = splitResponseArray[0].to_s
-   scoresresponse = splitResponseArray[1]
+   # splitResponseArray = response.split 
+   responseColour = response[0]
+   scoresresponse = response[1]
 
 
    RestClient.post(uri,
 
     {
      "content-type" => "application/json",
-     "color" => "green",
-     "message" => scoresresponse
+     "color" => "#{responseColour}",
+     "message" => "#{scoresresponse}"
 
     }.to_json,
     :content_type => :json, :accept => :json
