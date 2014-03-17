@@ -59,7 +59,7 @@ module Scoresbot
 			# listArray << "'Weekly Standard Div:' + " "   + '#{standardDev}'"
 
 			# listArray = "hello"
-				testmachine = "Bugscore:" + "#{bugScore}" + ", Weekly Avg:" + "#{averageScore}"
+				testmachine = "Bugscore:" + "#{bugScore}" + ", Weekly Avg:" + "#{averageScore}" + ", Weekly Std Deviation:" + "#{standardDev}"
 
 			return testmachine
 
