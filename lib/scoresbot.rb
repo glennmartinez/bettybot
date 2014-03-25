@@ -28,7 +28,7 @@ module Scoresbot
 			responseArray = Array.new
 
 			scorelist = Score.where(:teamname => teamname, :date.lte => (Time.now), :date.gte => (Time.now - teamweeks.weeks)).order_by(:date.asc)
-			yearlylist = Score.where(:teamname => teamname, :date.lte => (Time.now), :date.gte => (Time.now - 52.weeks)).order_by(:date.asc)
+			yearlylist = Score.where(:teamname => teamname, :date.lte => (Time.now), :date.gte => (Time.now - 12.weeks)).order_by(:date.asc)
 
 			scorelist.each do |score|
 
@@ -50,7 +50,7 @@ module Scoresbot
 
 			responseColour = self.getResponseColour(bugScoreAverage, standardDev)
 
-			testmachine = "Weekly Average:" + "<b>#{bugScoreAverage} </b>" + ",  52 Weekly Avg:" + "#{averageScore}" + ", Weekly Std Deviation:" + "#{standardDev}" + "<br><img src='http://upload.wikimedia.org/wikipedia/en/5/5e/Betty_Rubble.png' width='62' height='120'/>"
+			testmachine = "Weekly Average:" + "<b>#{bugScoreAverage} </b>" + ",  3 Month Avg:" + "#{averageScore}" + ", 3 Month Std Deviation:" + "#{standardDev}" + "<br><img src='http://upload.wikimedia.org/wikipedia/en/5/5e/Betty_Rubble.png' width='62' height='120'/>"
 
 			responseArray << responseColour
 			responseArray << testmachine
