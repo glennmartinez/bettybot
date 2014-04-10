@@ -7,7 +7,7 @@ module Scoresbot
 
 #expected message is 'betty scores hedgehogs 7'
 	def self.getScores(messageArray)
-		
+
 		command = messageArray[1]  #checks the command ie: scores, qanotes, help
 		teamname = messageArrau[2].to_s #gets first parameter such as 'teamname'
 		weeks = messageArray[3] #gets second parameter such as number of weeks
@@ -44,11 +44,11 @@ module Scoresbot
 			end
 
 			bugScoreAverage = bugScore / teamweeks
-			scoreArray.count 
+			scoreArray.count
 			averageScore = yearlyBugScore / scoreArray.count
 			standardDev =  scoreArray.stdev.round(2)
 
-			responseColour = self.getResponseColour(bugScoreAverage, standardDev)
+			responseColour = self.getResponseColour(bugScoreAverage, averageScore)
 
 			testmachine = "Weekly Average:" + "<b>#{bugScoreAverage} </b>" + ",  3 Month Avg:" + "#{averageScore}" + ", 3 Month Std Deviation:" + "#{standardDev}" + "<br><img src='http://upload.wikimedia.org/wikipedia/en/5/5e/Betty_Rubble.png' width='62' height='120'/>"
 
@@ -62,14 +62,14 @@ module Scoresbot
 
 
 
-	def self.getResponseColour(teamScore, standardDev)
+	def self.getResponseColour(teamScore, averageScore)
 
-		if teamScore <= standardDev
+		if teamScore <= averageScore
 
 			colour = 'green'
 		else
 			colour = 'red'
-		
+
 	  end
 	end
 
@@ -77,13 +77,13 @@ module Scoresbot
 	def self.supertest
 
 			scorelist = Score.where(:teamname => "muppets", :date.lte => (Time.now), :date.gte => (Time.now - 1.weeks)).order_by(:date.asc)
- 
+
 			scorelist.each do |score|
 
 				 bugScore +=	score.bugscore.to_i
 
 			end
- 
+
 
 
 
@@ -93,7 +93,7 @@ module Scoresbot
 		test = "super return"
 
 		return bugScore.to_s
-		
+
 	end
 
 
